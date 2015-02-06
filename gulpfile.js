@@ -9,7 +9,8 @@ gulp.task('facebook', function() {
     ])
     .pipe(noprotocol.angular({
       deps: [],
-      module: 'facebookApp'
+      module: 'facebookApp',
+      minify: false
     }))
     .pipe(gulp.dest('./dist'));
 });
@@ -21,7 +22,8 @@ gulp.task('twitter', function() {
     ])
     .pipe(noprotocol.angular({
       deps: [],
-      module: 'twitterApp'
+      module: 'twitterApp',
+      minify: false
     }))
     .pipe(gulp.dest('./dist'));
 });
