@@ -31,7 +31,16 @@ facebookApp.directive('socialFacebook', function ($rootScope, Facebook, $log, Fa
 
       scope.share = function() {
         Facebook.share({
-          url: scope.options.url
+          url: scope.options.url,
+          method: scope.options.method,
+          app_id: scope.options.app_id,
+          name: scope.options.name,
+          link: scope.options.link,
+          redirect_uri: scope.options.redirect_uri,
+          caption: scope.options.caption,
+          description: scope.options.description,
+          message: scope.options.message,
+          display: scope.options.display
         })
         .then(function(response) {
           FacebookEmitter.broadcast('share', true, response);
