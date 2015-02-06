@@ -6,7 +6,7 @@ socialFacebookApp.service('Facebook', function ($rootScope, $q, FacebookScriptLo
     FacebookScriptLoader.attach()
       .then(function(fb) {
         fb.api('/me', function(response) {
-          if ('error' in response) {
+          if (response && 'error' in response) {
             getMeDeferred.reject({
               error: response.error
             });
@@ -34,7 +34,7 @@ socialFacebookApp.service('Facebook', function ($rootScope, $q, FacebookScriptLo
     FacebookScriptLoader.attach()
       .then(function(fb) {
         fb.api('/me/permissions', function(response) {
-          if ('error' in response) {
+          if (response && 'error' in response) {
             getPermissionsDefer.reject({
               error: response.error
             });
@@ -53,7 +53,7 @@ socialFacebookApp.service('Facebook', function ($rootScope, $q, FacebookScriptLo
     FacebookScriptLoader.attach()
       .then(function(fb) {
         fb.api(`/${userId}/likes/${pageId}`, function(response) {
-          if ('error' in response) {
+          if (response && 'error' in response) {
             likePageDeffered.reject({
               error: response.error
             });
@@ -74,7 +74,7 @@ socialFacebookApp.service('Facebook', function ($rootScope, $q, FacebookScriptLo
     FacebookScriptLoader.attach()
       .then(function(fb) {
         fb.getLoginStatus(function(response) {
-          if ('error' in response) {
+          if (response && 'error' in response) {
             getLoginStatusDeferred.reject({
               error: response.error
             });
@@ -102,7 +102,7 @@ socialFacebookApp.service('Facebook', function ($rootScope, $q, FacebookScriptLo
           method: 'share',
           href: options.url
         }, function(response) {
-          if ('error' in response) {
+          if (response && 'error' in response) {
             shareDeferred.reject({
               error: response.error,
               code: response.error_code
@@ -122,7 +122,7 @@ socialFacebookApp.service('Facebook', function ($rootScope, $q, FacebookScriptLo
     FacebookScriptLoader.attach()
       .then(function(fb) {
         fb.logout(function(response) {
-          if ('error' in response) {
+          if (response && 'error' in response) {
             logoutDeferred.reject({
               error: response.error
             });
@@ -143,7 +143,7 @@ socialFacebookApp.service('Facebook', function ($rootScope, $q, FacebookScriptLo
     FacebookScriptLoader.attach()
       .then(function(fb) {
         fb.login(function(response) {
-          if ('error' in response) {
+          if (response && 'error' in response) {
             loginDeferred.reject({
               error: response.error
             });
@@ -168,7 +168,7 @@ socialFacebookApp.service('Facebook', function ($rootScope, $q, FacebookScriptLo
     FacebookScriptLoader.attach()
       .then(function(fb) {
         fb.api(`/me/picture?type=${type}`, function(response) {
-          if ('error' in response) {
+          if (response && 'error' in response) {
             getProfilePictureDeferred.reject({
               error: response.error
             });

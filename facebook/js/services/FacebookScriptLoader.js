@@ -13,10 +13,12 @@ socialFacebookApp.factory('FacebookScriptLoader', function(APP_ID, $q, $window) 
         return attachDeferred.promise;
       }
 
-      var script = document.createElement('script');
-      script.type = 'text/javascript';
-      script.src = '//connect.facebook.net/en_US/sdk.js';
-      document.body.appendChild(script);
+      if (!$window.FB) {
+        var script = document.createElement('script');
+        script.type = 'text/javascript';
+        script.src = '//connect.facebook.net/en_US/sdk.js';
+        document.body.appendChild(script);
+      }
 
       attached = true;
 
