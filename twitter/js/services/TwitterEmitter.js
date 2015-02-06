@@ -1,4 +1,4 @@
-socialTwitterApp.factory('TwitterEmitter', function($rootScope) {
+twitterApp.factory('TwitterEmitter', function($rootScope) {
 
   var _createEventName = function(key) {
     return `social.twitter.${key}`;

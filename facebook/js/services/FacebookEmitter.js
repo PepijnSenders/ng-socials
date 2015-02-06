@@ -1,4 +1,4 @@
-socialFacebookApp.factory('FacebookEmitter', function($rootScope) {
+facebookApp.factory('FacebookEmitter', function($rootScope) {
 
   var _createEventName = function(key) {
     return `social.facebook.${key}`;

@@ -1,4 +1,4 @@
-socialFacebookApp.factory('FacebookScriptLoader', function(APP_ID, $q, $window) {
+facebookApp.factory('FacebookScriptLoader', function(APP_ID, $q, $window) {
 
   var attachDeferred = $q.defer();
 

@@ -1,4 +1,4 @@
-socialFacebookApp.service('Facebook', function ($rootScope, $q, FacebookScriptLoader, $log, $timeout) {
+facebookApp.service('Facebook', function ($rootScope, $q, FacebookScriptLoader, $log, $timeout) {
 
   this.getMe = function() {
     var getMeDeferred = $q.defer();

@@ -1,4 +1,4 @@
-socialTwitterApp.directive('socialTwitter', function(Twitter, $window, TwitterEmitter) {
+twitterApp.directive('socialTwitter', function(Twitter, $window, TwitterEmitter) {
 
   return {
     scope: {

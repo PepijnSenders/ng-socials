@@ -1,4 +1,4 @@
-socialTwitterApp.factory('TwitterScriptLoader', function($q, $window) {
+twitterApp.factory('TwitterScriptLoader', function($q, $window) {
 
   var attachDeferred = $q.defer();
 

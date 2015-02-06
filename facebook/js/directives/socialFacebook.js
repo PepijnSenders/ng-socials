@@ -1,4 +1,4 @@
-socialFacebookApp.directive('socialFacebook', function ($rootScope, Facebook, $log, FacebookEmitter) {
+facebookApp.directive('socialFacebook', function ($rootScope, Facebook, $log, FacebookEmitter) {
 
   return {
     scope: {

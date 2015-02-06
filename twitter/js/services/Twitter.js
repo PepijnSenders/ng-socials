@@ -1,4 +1,4 @@
-socialTwitterApp.service('Twitter', function(TwitterScriptLoader, TwitterEmitter, $window) {
+twitterApp.service('Twitter', function(TwitterScriptLoader, TwitterEmitter, $window) {
 
   this.bind = function(eventName, cb) {
     TwitterScriptLoader.attach()
